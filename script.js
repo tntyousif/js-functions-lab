@@ -169,11 +169,13 @@ Complete the exercise in the space below:
 */
 
 function convertTemperature(temp,scale){
-    if (scale ==="c"){
+    switch (scale){
+    case "C":
         return(`${(temp*9/5)+32} (Fahrenheit).`);
-    }
-    else {
-        return(`${(temp-32)*5/9} (Celsius).`)
+    case "F":
+        return(`${(temp-32)*5/9} (Celsius).`);
+    default:
+        return ("Invalid scale")
     }
 }
 
@@ -197,7 +199,23 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
-
+function basicCalculator (numA, numB, operation){
+    switch (operation) {
+        case "add":
+            return (numA+numB);
+        case "subtract":
+            return (numA-numB);
+        case "multiply":
+            return (numA*numB);
+        case "divide":
+             if (numB === 0) {
+                return ("Error: Division by zero");
+            }
+            return numA / numB;
+        default:
+            return ("Error: Invalid operation");
+    }
+}
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
