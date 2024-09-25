@@ -278,9 +278,12 @@ Complete the exercise in the space below:
 function createUsername(fName, lName) {
     const fName3 = fName.substring(0,3);
     const lName3 = lName.substring(0,3);
-    const totalChr = fName.length + lName.length;
+    const totalChr = fName.length + lName.length -1 ;
     return fName3 + lName3 + totalChr;
 }
 
 
 console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+
+
+//ex 12
